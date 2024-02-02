@@ -2,6 +2,15 @@
   "name": "my-turborepo",
   "description": "A barebones Turborepo example for working with Task Graphs.",
   "packageManager": "pnpm@8.11.0",
+  "scripts": {
+    "build": "turbo build",
+    "clean": "git clean -xdf node_modules",
+    "clean:workspaces": "turbo clean",
+    "dev": "turbo dev --parallel",
+    "lint": "turbo lint --continue -- --cache --cache-location node_modules/.cache/.eslintcache",
+    "lint:fix": "turbo lint --continue -- --fix --cache --cache-location node_modules/.cache/.eslintcache",
+    "typecheck": "turbo typecheck"
+  },
   "devDependencies": {
     "turbo": "latest"
   }

@@ -5,6 +5,13 @@
       "dependsOn": ["prebuild", "^build"],
       "outputs": ["output-file.txt", "dist/**"]
     },
+    "clean": {
+      "cache": false
+    },
+    "dev": {
+      "persistent": true,
+      "cache": false
+    },
     "prebuild": {},
     "lint": {},
     "type-check": {}
